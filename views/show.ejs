@@ -64,7 +64,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-lg-4">
-  <h1> your choice </h1>
+  <h1 class="display-3 m-3"> your choice </h1>
   <div class="container">
   <div class="card border border-success" style="width: 18rem;">
     <img src=<%= campground.image %>>
@@ -103,7 +103,7 @@
        <button class="btn btn-info mt-2 mb-2 ">submit</button>
      </form>
      
-     <div class="card border border-primary">
+  
      
      <% for(let review of campground.reviews) { %>
       <div class="container  d-flex justify-content-center  align-items-center mt-2 mb-2">
@@ -121,7 +121,7 @@
          </div>
        <% } %>
      
-     </div>
+     
 
 
 
@@ -161,13 +161,31 @@
   </form>
 </div>
 </div>
+
+<div class="row g-3 m-3" id="imageGallery">
+      <% if (arrayofimages && arrayofimages.length > 0) { %>
+        <% for(let url of arrayofimages) { %>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="image-card">
+              <img class="image-responsive" width="500" height="500" src="<%= url %>" alt="City Image">
+            </div>
+          </div>
+        <% } %>
+      <% } else { %>
+        <p class="text-center text-muted">No images to display. Search for a city!</p>
+      <% } %>
+    </div>
+  </div>
 </body>
 
 <script>
   const mapToken =  '<%- process.env.MAPBOX_TOKEN %>';
  const campground = <%- JSON.stringify(campground) %>;
+
+
 </script>
 
+  
 
 <script src="/javascript/showmap.js"></script>
 

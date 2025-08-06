@@ -18,7 +18,13 @@ module.exports.show = async (req, res, next) => {
   const campground = await Campground.findById(req.params.id).populate(
     "reviews"
   );
-  res.render("show.ejs", { campground });
+
+  const data = await fetch(
+    `https://api.unsplash.com/search/photos?query=${campground.city}&client_id=${process.env.ACCESS_KEY}`
+  );
+  const images = await data.json();
+  arrayofimages = images.results.map((item) => item.urls.regular);
+  res.render("show.ejs", { campground, arrayofimages });
   // }
   // catch(err){
   //next(new ExpressError('campground not found' , 404))
