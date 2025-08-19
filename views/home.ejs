@@ -17,7 +17,9 @@
   <body>
     <nav class="navbar navbar-expand-lg d-flex flex-row font">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">Yelp camp </a>
+        <a class="navbar-brand text-white" style="font-weight: bold" href="#"
+          >Yelp camp
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -34,6 +36,7 @@
             <li class="nav-item">
               <a
                 class="nav-link text-white active"
+                style="font-weight: bold"
                 aria-current="page"
                 href="/campground"
                 >Campgrounds</a
@@ -42,6 +45,7 @@
             <li class="nav-item active">
               <a
                 class="nav-link text-white active"
+                style="font-weight: bold"
                 aria-current="page"
                 href="/campground/new"
                 >New campground</a
@@ -50,6 +54,7 @@
             <li class="nav-item active">
               <a
                 class="nav-link text-white active"
+                style="font-weight: bold"
                 aria-current="page"
                 href="/register"
                 >Register</a
@@ -58,6 +63,7 @@
             <li class="nav-item active">
               <a
                 class="nav-link text-white active"
+                style="font-weight: bold"
                 aria-current="page"
                 href="/login"
                 >Login</a
@@ -68,12 +74,23 @@
       </div>
     </nav>
 
-    <h1 class="display_1 text-white text-center mt-5">Yelp camp</h1>
+    <h1 class="display_1 text-center mt-5" style="color: rgb(16, 87, 63)">
+      Yelp camp
+    </h1>
 
     <div class="d-flex justify-content-center">
       <form action="/campground">
-        <button class="btn btn-outline-warning text-white">
-          GO for campgrounds
+        <button
+          style="
+            background-color: rgb(77, 196, 156);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',
+              serif;
+            padding: 1rem;
+            color: azure;
+            font-size: larger;
+          "
+        >
+          Go for campgrounds
         </button>
       </form>
     </div>
@@ -82,7 +99,7 @@
       class="d-flex justify-content-center text-white"
       style="margin-top: 70vh"
     >
-      <ul class="list-group">
+      <ul class="list-group bg-dark p-2">
         <span>&copy yelpcamp 2024 </span>
         <span>Code with Deepak </span>
       </ul>
